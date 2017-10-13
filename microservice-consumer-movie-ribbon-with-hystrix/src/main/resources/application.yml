@@ -1,0 +1,16 @@
+server:
+  port: 8010
+  
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon-with-hystrix
+   
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://user:password@localhost:8741/eureka
+  instance:
+    prefer-ip-address: true
+
+hystrix.command.default.circuitBreaker.requestVolumeThreshold: 5   
+  

@@ -1,0 +1,15 @@
+server:
+  port: 7901
+  
+spring:
+  application:
+    name: microservice-consumer-movie-eureka
+   
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://user:password@localhost:8741/eureka
+      #defaultZone: http://user:password@peer1:8761/eureka
+  instance:
+    prefer-ip-address: true
+  

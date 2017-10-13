@@ -1,0 +1,15 @@
+server:
+  port: 7901
+  
+spring:
+  application:
+    name: microservice-consumer-movie-feign-cust
+   
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://user:password@localhost:8741/eureka
+  instance:
+    prefer-ip-address: true
+ 
+logging.level.project.user.UserFeignClient: DEBUG 

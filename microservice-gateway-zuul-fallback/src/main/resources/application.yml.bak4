@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: microservice-gateway-zuul
+server:
+  port: 8740
+  
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://user:password@localhost:8741/eureka
+  instance:
+    prefer-ip-address: true
+    
+zuul:
+  routes:
+    abc:
+      path: /user-url/**
+      service-id: microservice-provider-user-eureka
+
+ribbon:
+  eureka:
+    enable: false
+ 
+microservice-provider-user-eureka:
+  ribbon:
+    listOfServers: http://localhost:7900,http://localhost:7901
+      
+
+      
+     

@@ -1,0 +1,21 @@
+server:
+  port: 8011
+  
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon-without-erueka
+   
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://user:password@localhost:8741/eureka
+  instance:
+    prefer-ip-address: true
+    
+ribbon:
+  erueka:
+    enable: false
+
+microservice-provider-user:
+  ribbon:
+    listOfServers: localhost:7900

@@ -1,0 +1,22 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password   
+server:
+  port: 8741
+  
+eureka:
+  datacenter: cloud
+  environment: product  
+  client:
+    service-url: 
+      defaultZone: http://user:password@localhost:8741/eureka
+    register-with-eureka: false
+    fetch-registry: false
+
+    
+
+      
+     
